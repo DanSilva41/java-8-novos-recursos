@@ -15,10 +15,12 @@ public class OrdenaStrings {
         palavras.add("Mansão");
         palavras.add("Pousada");
 
-        palavras.sort(new ComparadorPorTamanho());
+        palavras.sort((s1, s2) -> s1.length() - s2.length());
 
         // Usando foreach
         palavras.forEach(s -> System.out.println(s));
+
+//        new Thread(() -> System.out.println("Executando um Runnable")).start();
 
     }
 }
