@@ -3,6 +3,7 @@ package br.com.danilo.alura.teste;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 public class Datas {
     public static void main(String[] args) {
@@ -19,5 +20,9 @@ public class Datas {
 
         LocalDate novaData = olimpiadasRio.plusYears(4);
         System.out.println(novaData);
+
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String valorFormatado = novaData.format(formatador);
+        System.out.println(valorFormatado);
     }
 }
