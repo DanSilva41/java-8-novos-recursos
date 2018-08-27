@@ -9,3 +9,5 @@ Stream:
     método adicionada às coleções. Filtrar, definir criterios de busca
 Optinal:
     Nova classe como alternativa para evitar NullPointerException
+Datas:
+    Os principais métodos do Java 8 não modificam a variavel atual, mas sim retornam uma nova.
