@@ -1,6 +1,6 @@
 # Curso Java 8: Tire proveito dos novos recursos da linguagem
 Realizado na plataforma Alura, aplicando novos recursos vindo na versão 8 do Java. 
-Lambadas, default methods, Interfaces funcionais, methods references, Stream, Filter, Collectors e novas APIs de datas.
+Lambdas, default methods, Interfaces funcionais, methods references, Stream, Filter, Collectors e novas APIs de datas.
 
 O curso abordou os seguintes tópicos:
 
