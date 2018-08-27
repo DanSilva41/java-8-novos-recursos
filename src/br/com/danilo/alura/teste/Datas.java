@@ -1,9 +1,6 @@
 package br.com.danilo.alura.teste;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.Period;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 public class Datas {
@@ -29,5 +26,20 @@ public class Datas {
         DateTimeFormatter formatadorComHoras = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
         LocalDateTime agora = LocalDateTime.now();
         System.out.println(agora.format(formatadorComHoras));
+
+        LocalTime intervalo = LocalTime.of(3, 20);
+        System.out.println(intervalo);
+
+        Year ano = Year.now();
+        System.out.println(ano);
+
+        YearMonth anoEMes = YearMonth.now();
+        System.out.println(anoEMes);
+
+        Instant instante = Instant.now();
+        System.out.println(instante);
+
+        ZonedDateTime zonedDateTime = ZonedDateTime.now();
+        System.out.println(zonedDateTime);
     }
 }
