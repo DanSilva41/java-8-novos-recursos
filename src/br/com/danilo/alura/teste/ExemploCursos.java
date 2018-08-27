@@ -3,6 +3,7 @@ package br.com.danilo.alura.teste;
 import br.com.danilo.alura.dominio.Curso;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ExemploCursos {
 
@@ -39,10 +40,23 @@ public class ExemploCursos {
 
         qualquerCurso.ifPresent(System.out::println);
 
-        OptionalDouble media = cursos.stream()
-                .filter(c -> c.getAlunos() >= 100)
+        System.out.println("Media de todos os cursos = "+ cursos.stream()
                 .mapToInt(Curso::getAlunos)
-                .average();
+                .average());
+
+        cursos = cursos.stream()
+                .filter(c -> c.getAlunos() >= 100)
+                .collect(Collectors.toList());// retorna uma lista
+
+        cursos.forEach(System.out::println);
+
+        cursos.stream()
+                .filter(c -> c.getAlunos() >= 100)
+                .collect(Collectors.toMap( // Retornando Map
+                        c -> c.getNome(),
+                        c -> c.getAlunos()
+                ))
+                .forEach((nome, alunos) -> System.out.println(nome + " tem "+ alunos + " alunos")); // Iterar sobre Map
 
     }
 }
