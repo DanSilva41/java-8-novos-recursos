@@ -6,4 +6,6 @@ Interface funcional:
 Method reference:
     É a forma de escrever uma expressão llambda mas de forma mais enxuta. Ex: String::lenght
 Stream:
-    método adicionada às coleções. Filtrar/
+    método adicionada às coleções. Filtrar, definir criterios de busca
+Optinal:
+    Nova classe como alternativa para evitar NullPointerException

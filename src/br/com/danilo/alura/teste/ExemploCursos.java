@@ -2,9 +2,7 @@ package br.com.danilo.alura.teste;
 
 import br.com.danilo.alura.dominio.Curso;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class ExemploCursos {
 
@@ -27,7 +25,24 @@ public class ExemploCursos {
         cursos.stream().filter(c -> c.getAlunos() >= 100).map(Curso::getAlunos).forEach(System.out::println);
 
         // Somar usando IntStream
-        int soma = cursos.stream().filter(c -> c.getAlunos() >= 100).mapToInt(Curso::getAlunos).sum();
+        int soma = cursos.stream()
+                .filter(c -> c.getAlunos() >= 100)
+                .mapToInt(Curso::getAlunos)
+                .sum();
         System.out.println(soma);
+
+        Optional<Curso> qualquerCurso = cursos.stream()
+                .filter(c -> c.getAlunos() > 100)
+                .findAny();
+
+        Curso curso = qualquerCurso.orElseThrow(null);// Devolve um Curso ou null
+
+        qualquerCurso.ifPresent(System.out::println);
+
+        OptionalDouble media = cursos.stream()
+                .filter(c -> c.getAlunos() >= 100)
+                .mapToInt(Curso::getAlunos)
+                .average();
+
     }
-    }
+}
