@@ -1,10 +1,8 @@
 package br.com.danilo.alura.teste;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class OrdenaStrings {
 
@@ -17,26 +15,11 @@ public class OrdenaStrings {
         palavras.add("Mansão");
         palavras.add("Pousada");
 
-        Comparator<String> comparador = new ComparadorPorTamanho();
-//        Collections.sort(palavras, comparador);
-        palavras.sort(comparador);
-
-//        for (String palavra : palavras) {
-//            System.out.println(palavra);
-//        }
+        palavras.sort(new ComparadorPorTamanho());
 
         // Usando foreach
-        Consumer<String> consumidor = new ImprimeNaLinha();
-        palavras.forEach(consumidor);
+        palavras.forEach(s -> System.out.println(s));
 
-    }
-}
-
-class ImprimeNaLinha implements Consumer<String> {
-
-    @Override
-    public void accept(String s) {
-        System.out.println(s);
     }
 }
 

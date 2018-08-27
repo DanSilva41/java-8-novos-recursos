@@ -1,2 +1,2 @@
 Default methods:
-    Métodos que contém um corpo(implementação) dentro de uma interface. EX: default void sort() na interface java.util.List
+    Métodos que contém um corpo(implementação) default dentro de uma interface. EX: default void sort() na interface java.util.List
