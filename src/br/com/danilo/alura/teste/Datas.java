@@ -1,6 +1,7 @@
 package br.com.danilo.alura.teste;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -24,5 +25,9 @@ public class Datas {
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         String valorFormatado = novaData.format(formatador);
         System.out.println(valorFormatado);
+
+        DateTimeFormatter formatadorComHoras = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
+        LocalDateTime agora = LocalDateTime.now();
+        System.out.println(agora.format(formatadorComHoras));
     }
 }
