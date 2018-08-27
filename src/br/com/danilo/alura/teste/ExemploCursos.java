@@ -21,8 +21,13 @@ public class ExemploCursos {
 //        cursos.forEach(System.out::println);
 
         // Filtrar por cursos com mais de 100 alunos
-
         cursos.stream().filter(c -> c.getAlunos() >= 100).forEach(System.out::println);
 
-        }
+        // Depois de filtrar vamos mapear  para saber a quantidade de alunos destes cursos
+        cursos.stream().filter(c -> c.getAlunos() >= 100).map(Curso::getAlunos).forEach(System.out::println);
+
+        // Somar usando IntStream
+        int soma = cursos.stream().filter(c -> c.getAlunos() >= 100).mapToInt(Curso::getAlunos).sum();
+        System.out.println(soma);
+    }
     }
