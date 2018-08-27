@@ -1,2 +1,5 @@
 Default methods:
     Métodos que contém um corpo(implementação) default dentro de uma interface. EX: default void sort() na interface java.util.List
+Interface funcional:
+    Onde tenho somente um método não implementado e posso ter outros default methods.
+    É possível usar lambda por cima da interface pois se referenciará este únido método contido na interface.

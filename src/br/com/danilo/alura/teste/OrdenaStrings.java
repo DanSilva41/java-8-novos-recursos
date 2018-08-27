@@ -3,6 +3,7 @@ package br.com.danilo.alura.teste;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 
 public class OrdenaStrings {
 
@@ -15,7 +16,13 @@ public class OrdenaStrings {
         palavras.add("Mansão");
         palavras.add("Pousada");
 
-        palavras.sort((s1, s2) -> s1.length() - s2.length());
+//        palavras.sort((s1, s2) -> s1.length() - s2.length());
+        palavras.sort(Comparator.comparing(s -> s.length())); // method reference
+
+        // Explicação
+//        Function<String, Integer> funcao = s -> s.length();
+//        Comparator<String> comparador = Comparator.comparing(funcao);
+//        palavras.sort(comparador);
 
         // Usando foreach
         palavras.forEach(s -> System.out.println(s));
