@@ -3,3 +3,5 @@ Default methods:
 Interface funcional:
     Onde tenho somente um método não implementado e posso ter outros default methods.
     É possível usar lambda por cima da interface pois se referenciará este únido método contido na interface.
+Method reference:
+    É a forma de escrever uma expressão llambda mas de forma mais enxuta. Ex: String::lenght

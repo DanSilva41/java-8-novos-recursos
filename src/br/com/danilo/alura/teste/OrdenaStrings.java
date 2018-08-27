@@ -17,7 +17,8 @@ public class OrdenaStrings {
         palavras.add("Pousada");
 
 //        palavras.sort((s1, s2) -> s1.length() - s2.length());
-        palavras.sort(Comparator.comparing(s -> s.length())); // method reference
+//        palavras.sort(Comparator.comparing(s -> s.length())); // method reference
+        palavras.sort(Comparator.comparing(String::length)); // mais tipado
 
         // Explicação
 //        Function<String, Integer> funcao = s -> s.length();
@@ -25,7 +26,7 @@ public class OrdenaStrings {
 //        palavras.sort(comparador);
 
         // Usando foreach
-        palavras.forEach(s -> System.out.println(s));
+        palavras.forEach(System.out::println);
 
 //        new Thread(() -> System.out.println("Executando um Runnable")).start();
 
